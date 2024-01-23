@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    build:
+      context: .
+      dockerfile: db.Dockerfile
+    environment:
+      POSTGRES_PASSWORD: local
+    ports:
+    - "55432:5432"
+  api:
+    build:
+      context: ../../
+      dockerfile: deployments/local/api.Dockerfile
+    ports:
+      - "80:8080"
+networks:
+  default:
+    name: 'test'

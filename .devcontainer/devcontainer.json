@@ -5,7 +5,7 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/go:1-1.21-bullseye",
 	"runArgs": [
-		"--network=deployments_default"
+		"--network=devcontainer_default"
 	]
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
